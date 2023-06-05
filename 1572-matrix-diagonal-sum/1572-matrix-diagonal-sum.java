@@ -6,7 +6,7 @@ class Solution {
         {
             for(int j=0;j<mat[0].length;j++)
             {
-                if(i==j||i==0&&j==mat.length-1||i==mat.length-1&&j==0||i+j==mat.length-1)
+                if(i==j||i+j==mat.length-1)
                     sum=sum+mat[i][j];
 }
         }
