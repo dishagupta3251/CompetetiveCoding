@@ -6,9 +6,9 @@ class Solution {
            if(command.charAt(i)=='G')
                res=res+'G';
            else if(command.charAt(i)=='('&&command.charAt(i+1)==')')
-              { res=res+'o';i++;}
+               res=res+'o';
            else if(command.charAt(i)=='('&&command.charAt(i+1)=='a')
-               {res=res+"al";i=i+3;}
+               res=res+"al";
                
        }
         return res;
