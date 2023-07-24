@@ -1,7 +1,6 @@
 class Solution {
     public List<String> cellsInRange(String s) {
-        List<String> ls=new ArrayList<>();int diff=0;
-        String st="";
+        List<String> ls=new ArrayList<>();
         int col1=s.charAt(0);
         int col2=s.charAt(3);
         int r1=s.charAt(1);
