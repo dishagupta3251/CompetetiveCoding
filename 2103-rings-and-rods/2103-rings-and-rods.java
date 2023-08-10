@@ -1,20 +1,22 @@
+import java.util.*;
 class Solution {
     public int countPoints(String rings) {
-         String ar[]=new String[10];int c=0;
-        for(int i=0;i<rings.length();i++)
+        HashMap<Character,String> map=new HashMap<>();
+            for(int i=1;i<rings.length();i+=2)
+            {
+                if(map.containsKey(rings.charAt(i)))
+                {
+                    map.put(rings.charAt(i),map.get(rings.charAt(i))+rings.charAt(i-1));
+                }
+                else
+                    map.put(rings.charAt(i),""+rings.charAt(i-1));
+            }
+        int c=0;
+        for(Map.Entry<Character,String> hm :map.entrySet())
         {
-            if(i%2!=0)
-             {int k=rings.charAt(i)-'0';
-              ar[k]=ar[k]+rings.charAt(i-1);
-             }
+            if(hm.getValue().contains("B")&&hm.getValue().contains("G")&&hm.getValue().contains("R"))
+                c++;
         }
-         for(int i=0;i<ar.length;i++)
-        {
-             if(ar[i]!=null)
-             {if(ar[i].contains("B")&&ar[i].contains("G")&&ar[i].contains("R"))
-                 c++;}
-         }
-       
         return c;
     }
 }
