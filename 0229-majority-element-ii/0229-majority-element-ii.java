@@ -2,7 +2,6 @@ import java.util.*;
 class Solution {
     public List<Integer> majorityElement(int[] nums) {
         List<Integer> ar=new ArrayList<Integer>();
-        Arrays.sort(nums);
         HashMap<Integer,Integer> map=new HashMap<>();
         for(int i=0;i<nums.length;i++)
         {
