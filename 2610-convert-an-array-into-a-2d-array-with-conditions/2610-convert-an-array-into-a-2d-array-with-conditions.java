@@ -17,7 +17,6 @@ class Solution {
                 --i;}
              }
             res.add(new ArrayList<>(temp));
-            System.out.println(res);
             temp.clear();
             
         }
