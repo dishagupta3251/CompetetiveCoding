@@ -5,12 +5,12 @@ class Solution {
         {
             if(s.charAt(i)=='*')
                 count++;
-            if(s.charAt(i)=='|'&&start==0)
+            if(s.charAt(i)=='|')
             {j=i+1;
-             start=1;
+           
                 while(s.charAt(j)!='|')
                     j++;
-             start=0;
+            
              i=j;
             }        
         }
